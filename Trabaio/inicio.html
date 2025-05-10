@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Extensão</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <main>
+        <header>
+            <a href="inicio.html" class="titulo">EcoDigital</a>
+            <img src="assets/logo.png" alt="logo" class="logo">
+        </header>
+        <nav>
+           
+            <a href="" id="dicas">Dicas de Descarte</a>
+            <a href="" id="reutilizacao">Classificação do Lixo Eletrônico</a>
+        </nav>
+        <section>
+            <aside class="secao1-aside">
+                <p class="titulo-section">Descarte Eletrônico Consciente</p>
+                <p class="subtitulo-section">A importância de descartar corretamente seus eletrônicos</p>
+                <p class="conteudo1">A cada dia, milhões de aparelhos eletrônicos são descartados no mundo. Quando jogados no lixo comum, esses equipamentos podem liberar substâncias tóxicas que contaminam o solo, a água e o ar. Além disso, muitos desses materiais podem ser reciclados e reutilizados na produção de novos produtos.</p>
+                <p class="conteudo1"><p class="conteudo1">Descartar corretamente seus eletrônicos é uma atitude responsável que ajuda a preservar o meio ambiente e a reduzir o desperdício de recursos naturais. Faça a diferença: descarte com consciência.</p></p>
+            </aside>
+            <article class="secao1-article">
+                <img src="assets/img1.webp" alt="imagem1" class="imagem1-inicio">
+            </article>
+        </section>
+        <section>
+            <aside class="secao2-aside">
+                <img src="assets/img.png" alt="imagem1" class="imagem2-inicio">
+            </aside>
+            <article class="secao2-article">
+                <p class="titulo-section">Beneficios da Reciclagem</p>
+                <p class="subtitulo-section">Um passo essencial para o futuro sustentável</p>
+                <p class="conteudo1">Reciclar eletrônicos reduz a poluição, evita o descarte de substâncias tóxicas no meio ambiente e permite o reaproveitamento de materiais valiosos, como metais e plásticos. Além disso, contribui para a economia circular e preserva os recursos naturais.</p>
+                
+            </article>
+        </section>
+
+        <p class="formulario">Responda o Formulário</p>
+        <p class="formulario2">PARA GANHAR UMA RECOMPENSA</p>
+    </main>
+
+    <div class="quiz-box" id="quizVerdadeiroFalso">
+        <p class="pergunta-titulo">Responda: Verdadeiro ou Falso</p>
+      
+        <div class="pergunta" data-id="1" data-correta="verdadeiro">
+          <p>1. Descartar eletrônicos no lixo comum pode liberar substâncias tóxicas.</p>
+          <label><input type="radio" name="p1" value="verdadeiro"> Verdadeiro</label>
+          <label><input type="radio" name="p1" value="falso"> Falso</label>
+        </div>
+      
+        <div class="pergunta" data-id="2" data-correta="falso">
+          <p>2. Todos os materiais dos eletrônicos são impossíveis de serem reciclados.</p>
+          <label><input type="radio" name="p2" value="verdadeiro"> Verdadeiro</label>
+          <label><input type="radio" name="p2" value="falso"> Falso</label>
+        </div>
+      
+        <div class="pergunta" data-id="3" data-correta="verdadeiro">
+          <p>3. A reciclagem de eletrônicos contribui para a economia circular.</p>
+          <label><input type="radio" name="p3" value="verdadeiro"> Verdadeiro</label>
+          <label><input type="radio" name="p3" value="falso"> Falso</label>
+        </div>
+      
+        <button onclick="verificarQuiz()" class="botao-confere">Verificar Respostas</button>
+      </div>
+      
+      <div id="feedback-overlay" class="feedback-overlay oculto">
+        <div id="feedback-box" class="feedback-box-modal">
+          <p class="feedback-titulo">Nos avalie: o quanto esse quiz te ajudou?</p>
+          <div class="estrelas" id="estrelas">
+            <span data-value="1">&#9733;</span>
+            <span data-value="2">&#9733;</span>
+            <span data-value="3">&#9733;</span>
+            <span data-value="4">&#9733;</span>
+            <span data-value="5">&#9733;</span>
+          </div>
+          <button onclick="enviarFeedback()" class="botao-feedback">Enviar</button>
+        </div>
+      </div>
+      
+    
+      <script>
+        function verificarQuiz() {
+            const perguntas = document.querySelectorAll(".quiz-box .pergunta");
+            let todasMarcadas = true;
+        
+            perguntas.forEach(pergunta => {
+                const correta = pergunta.dataset.correta;
+                const selecionado = pergunta.querySelector("input:checked");
+        
+                pergunta.classList.remove("correta", "errada");
+        
+                if (!selecionado) {
+                    todasMarcadas = false;
+                    return;
+                }
+        
+                const resposta = selecionado.value;
+        
+                if (resposta === correta) {
+                    pergunta.classList.add("correta");
+                } else {
+                    pergunta.classList.add("errada");
+                }
+        
+                const radios = pergunta.querySelectorAll("input");
+                radios.forEach(r => r.disabled = true);
+            });
+        
+            if (!todasMarcadas) {
+                alert("Por favor, responda todas as perguntas antes de verificar.");
+                return;
+            }
+        
+            document.querySelector(".botao-confere").disabled = true;
+        
+            setTimeout(() => {
+                document.getElementById("feedback-overlay").classList.remove("oculto");
+            }, 2000);
+        }
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const estrelas = document.querySelectorAll("#estrelas span");
+            estrelas.forEach(estrela => {
+                estrela.addEventListener("click", () => {
+                    const valor = estrela.getAttribute("data-value");
+                    estrelas.forEach(e => {
+                        e.classList.toggle("selecionada", e.getAttribute("data-value") <= valor);
+                    });
+                    estrela.parentElement.setAttribute("data-nota", valor);
+                });
+            });
+        });
+        
+        function enviarFeedback() {
+            const estrelas = document.getElementById("estrelas");
+            const nota = estrelas.getAttribute("data-nota");
+        
+            if (nota) {
+                alert("Obrigado pelo seu feedback! Nota: " + nota + " estrela(s).");
+                document.getElementById("feedback-overlay").classList.add("oculto");
+            } else {
+                alert("Por favor, selecione uma nota antes de enviar.");
+            }
+        }
+
+        function enviarFeedback() {
+    const estrelas = document.getElementById("estrelas");
+    const nota = estrelas.getAttribute("data-nota");
+    const feedbackBox = document.getElementById("feedback-box");
+
+    if (nota) {
+        // Substitui conteúdo da caixa por mensagem de agradecimento
+        feedbackBox.innerHTML = `<p class="feedback-titulo">Obrigado pelo seu feedback!</p>`;
+
+        // Some após 2 segundos
+        setTimeout(() => {
+            document.getElementById("feedback-overlay").classList.add("oculto");
+        }, 2000);
+    } else {
+        alert("Por favor, selecione uma nota antes de enviar.");
+    }
+}
+
+        </script>
+        
+        
+        
+
+        
+        
+        
+</body>
+</html>
