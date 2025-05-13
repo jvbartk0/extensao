@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+main {
+    width: 100%;
+}
+
+body {
+    background-color: #CFDFD2;
+    overflow-x: hidden;
+    
+}
+
+.titulo {
+    font-style: italic;
+    font-weight: 700;
+    color: white;
+    font-size: 60px;
+    margin: 38px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.titulo:hover {
+    color: #8ce2c5;
+    font-size: 62px;
+
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+header {
+    background-color: #216551;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav {
+    background-color: #5EA990;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 100px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+
+}
+
+a:hover {
+    font-size: 22px;
+    color: rgb(206, 255, 210);
+
+}
+
+section {
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    
+
+}
+
+.secao1-article {
+    background-color: #94ccb9;
+    height: auto;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 50px;
+    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.titulo-lista {
+    font-weight: bold;
+    font-size: 30px;
+    color: #133b2f;
+    font-style: italic;
+
+}
+
+.conteudo-lista {
+    font-size: 20px;
+    color: #002c14;
+    line-height: 1.6;
+}
+
+.subtitulo-section {
+    color: #216551;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+.titulo-section {
+    color: #216551;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+footer{
+    height: auto;
+    background-color: #216551;
+    text-align: center;
+    
+    padding: 30px 400px;
+}
+
+footer > p{
+    color: white;
+    font-size: 18px;
+}
+
+
+
+

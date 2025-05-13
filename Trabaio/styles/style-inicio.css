@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+main {
+    width: 100%;
+}
+
+body {
+    background-color: #CFDFD2;
+    overflow-x: hidden;
+}
+
+.titulo {
+    font-style: italic;
+    font-weight: 700;
+    color: white;
+    font-size: 60px;
+    margin: 38px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.titulo:hover {
+    color: #8ce2c5;
+    font-size: 62px;
+
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+header {
+    background-color: #216551;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav {
+    background-color: #5EA990;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 100px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+
+}
+
+a:hover {
+    font-size: 22px;
+    color: rgb(206, 255, 210);
+
+}
+
+section {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.secao1-article {
+    background-color: #94ccb9;
+    width: 40%;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 10px 11px 32px -17px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 11px 32px -17px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 11px 32px -17px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.secao2-article{
+    width: 60%;
+    padding: 80px 30px 0px 30px;
+    text-align: end;
+    
+}
+
+.secao2-aside {
+    background-color: #94ccb9;
+    width: 40%;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 10px 11px 32px -17px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 11px 32px -17px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 11px 32px -17px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.secao1-aside{
+    width: 60%;
+    padding: 40px;
+}
+
+.imagem1-inicio:hover{
+    scale: 1.1;
+}
+
+.imagem1-inicio{
+    margin-top: 50px;
+    width: auto;
+    height: 450px;
+    transition-duration: 0.2s;
+    
+}
+
+.imagem2-inicio {
+    width: auto;
+    height: 650px;
+    transition-duration: 0.2s;
+    margin-bottom: 40px;
+    margin-top: -50px;
+}
+
+.imagem2-inicio:hover{
+    scale: 1.1;
+}
+
+
+.subtitulo-section {
+    color: #216551;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+.titulo-section {
+    color: #216551;
+    font-size: 50px;
+    
+    font-weight: 800;
+}
+
+.conteudo1 {
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+
+.formulario{
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 800;
+    color: #216551;
+    text-align: center;
+}
+
+.formulario2 {
+    text-align: center;
+    color: #216551;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.quiz-box {
+    background-color: #5EA990;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 80%;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease;
+    
+}
+
+.quiz-box p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.pergunta {
+    background-color: #94ccb9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.pergunta label {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #216551;
+    cursor: pointer;
+}
+
+.pergunta.correta {
+    background-color: #a5d6a7 !important;
+}
+
+.pergunta.errada {
+    background-color: #ef9a9a !important;
+}
+
+.botao-confere {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background-color: #216551;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-confere:hover {
+    background-color: #1a4f42;
+}
+
+.feedback-box {
+    background-color: #5EA990;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease forwards;
+    display: none;
+}
+
+.feedback-box.oculto {
+    display: none;
+}
+
+.feedback-titulo {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.estrelas span {
+    font-size: 35px;
+    color: #cccccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.estrelas span.selecionada {
+    color: gold;
+}
+
+.botao-feedback {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    background-color: #216551;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao-feedback:hover {
+    background-color: #1a4f42;
+}
+
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.feedback-box-modal {
+    background-color: #5EA990;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.4s ease;
+}
+
+.feedback-box-modal p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.estrelas span {
+    font-size: 35px;
+    color: #cccccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.estrelas span.selecionada {
+    color: gold;
+}
+
+.botao-feedback {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background-color: #216551;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao-feedback:hover {
+    background-color: #1a4f42;
+}
+
+.oculto {
+    display: none;
+}
+
+footer{
+    height: auto;
+    background-color: #216551;
+    text-align: center;
+    
+    padding: 30px 400px;
+}
+
+footer > p{
+    color: white;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+
